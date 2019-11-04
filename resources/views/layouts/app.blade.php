@@ -38,10 +38,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <form action="{{ route('search') }}" method="POST">
+                        <form action="{{ route('search') }}" method="POST" class="form-inline">
                             @csrf
-                            <input type="text" name="query" />
-                            <input type="submit" class="btn btn-sm btn-primary" value="Search" />
+							<div class="form-group">
+								<input type="text" name="query" class="form-control" placeholder="Search" />
+							</div>
+                            <button type="submit" class="btn btn-primary">Search</button>
                         </form>
                     </ul>
                 </div>
